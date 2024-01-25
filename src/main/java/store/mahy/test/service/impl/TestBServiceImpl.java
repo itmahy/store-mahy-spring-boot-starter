@@ -12,10 +12,12 @@ import store.mahy.test.service.TestService;
 
 public class TestBServiceImpl implements TestService {
 
-    private TestProperties test;
+    private final TestProperties test;
     public TestBServiceImpl(TestProperties test) {
         this.test = test;
     }
+
+    @Override
     public String test(String desc) {
         System.out.println(test.toString() + "====>>>>B:" + desc);
         return "测试B";

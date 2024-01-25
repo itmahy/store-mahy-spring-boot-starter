@@ -11,11 +11,12 @@ import store.mahy.test.service.TestService;
  */
 public class TestAServiceImpl implements TestService {
 
-    private TestProperties test;
+    private final TestProperties test;
     public TestAServiceImpl(TestProperties test) {
         this.test = test;
     }
 
+    @Override
     public String test(String desc) {
         System.out.println(test.toString() + "====>>>>A:" + desc);
         return "测试A";
